@@ -27,7 +27,6 @@ public:
 	int Contains(int number);
 
 	//2. A function that can modify the value of an integer when called with the index of the integer in the array and return the new value and old value back to the user.
-	//?QUESION: Does "return to the user" mean display to std or does it reference the return value of the function?
 	/**
 	* Sets the number at the given index to the new number.
 	* Returns a pointer to an int array of length two in the form [oldNumber, newNumber].
@@ -43,7 +42,7 @@ public:
 	 
 	//4. A function which intakes an index of an array and replaces the value with either 0 or removes the integer altogether.
     /**
-    * Removes the FIRST occurrence of the given number from the array.
+    * Removes the value at the given index of the array.
     * Returns true if the number is removed.
     * Returns false if the number is not found.
     * POST-CONDITION: The order of the array is not maintained during removal.

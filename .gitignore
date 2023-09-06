@@ -876,3 +876,4 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/clion,cmake,macos,windows,visualstudio,visualstudiocode,rider,appcode,intellij,pycharm
 Assignment 1/.idea/.name
 .vscode/settings.json
+build/

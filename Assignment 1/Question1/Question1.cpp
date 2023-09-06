@@ -82,13 +82,10 @@ void Question1::AddToEnd(int newNumber)
 	numArray[count++] = newNumber;
 }
 
-bool Question1::Remove(int number)
+bool Question1::Remove(int index)
 {
-    //Get the index of the number
-	int index = Contains(number);
-    
     //If the number exists
-	if (index != -1)
+	if (index >= 0 && index < count)
 	{
         //Overwrite the number with the last number
 		numArray[index] = numArray[--count];

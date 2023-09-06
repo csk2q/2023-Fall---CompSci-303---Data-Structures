@@ -37,7 +37,6 @@ int main()
 		}
 	}
 
-	//! ASK professor for a better way to read an entire text file.
 	//Load text from file
 	ifstream txtFile;
 	txtFile.open(txtName);
@@ -168,7 +167,7 @@ int main()
 		case (4): // Remove a value.
 		{
             //Get user input
-			cout << "Number to remove: ";
+			cout << "Index of number to remove: ";
 			cin >> input;
 			int num = stoi(input);
             
@@ -176,7 +175,7 @@ int main()
 			if (NumArray.Remove(num))
 				cout << "Number was successfully removed.\n";
 			else
-				cout << "Failed to remove number. The number was not found in the array.\n";
+				cout << "Failed to remove number. Index out of bounds.\n";
 		}
 		break;
 
