@@ -22,7 +22,7 @@ int main()
 	while (!validFile)
 	{
 		cout << "Please enter the path to the text file to load. Eg: D:/Test/TestNum.txt\n> ";
-		cin >> txtName;
+		getline(cin, txtName);
 
 		//This requires c++17 to function
 		if (!filesystem::exists(txtName))

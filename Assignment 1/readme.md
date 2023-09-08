@@ -11,7 +11,7 @@ Questions 1 and 2 are the same in function but Question 2 makes use of some try-
 ## Usage examples of functions
 
 ### Startup
-Upon running the program you will first be asked to enter the path to the txt file to load.  
+Upon running the program you will first be asked to enter the path to the txt file to load. (An example file has been provided: [IntegersFile.txt](IntegersFile.txt))    
 ![Alt text](screenshots/startup.png)
 
 Upon entering the full path to a text file it will then load the file and read the integers from the file.  
