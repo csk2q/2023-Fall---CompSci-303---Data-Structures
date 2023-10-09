@@ -32,8 +32,10 @@ int getInputInt(string msg)
 string getInput(string msg)
 {
 	cout << msg;
+	if (cin.peek() == '\n')
+		cin.ignore();
 	string input;
-	cin >> input;
+	getline(cin, input);
 	return input;
 }
 
@@ -100,7 +102,7 @@ int main()
 			cout << "Method \"push_front\" executed.\n";
 			list.display();
 		}
-			break;
+		break;
 
 		case (2): //push_back
 		{
@@ -109,7 +111,7 @@ int main()
 			cout << "Method \"push_back\" executed.\n";
 			list.display();
 		}
-			break;
+		break;
 
 		case (3): //pop_front
 			list.pop_front();
@@ -168,7 +170,7 @@ int main()
 				cout << "unsuccessfully.\nProvided index is out of range.\n";
 			list.display();
 		}
-			break;
+		break;
 
 		case (10): //find
 		{
@@ -176,7 +178,7 @@ int main()
 			cout << "Item \"" << input << "\" was found at index " << list.find(input) << ".\n"
 				<< "Note that if the item was not found the size of the list is returned.\n";
 		}
-			break;
+		break;
 
 		case (11): //display
 			cout << "List:\n";
