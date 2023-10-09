@@ -19,28 +19,31 @@ private:
 public:
 	Single_Linked_List();
 
-	//TODO Comment all functions.
-	//	Refrence the assignment pdf & slides.
-	//	Page 114 of Ch4 has a list of the list class' functions.
-
+	///Add a item to the front of the list.
 	void push_front(T item);
+	///Add a item to the back of the list.
 	void push_back(T item);
+	//Delete the item at the front of the list.
 	void pop_front();
+	///Delete the item at the end of the list.
 	void pop_back();
+	///Returns the item at the front of the list.
 	T front();
+	///Returns the item at the end of the list.
 	T back();
 	///Returns true if the list is empty.
 	bool empty();
 
-	///Insert item at position index (starting at 0). Insert at the end if index is beyond the end of the list
+	///Inserts an item at given index. Inserts at the end if the index is beyond the end of the list.
 	void insert(size_t index, const T& item);
 
-	///Remove the item at position index. Return true if successful; return false if index is beyond the end of the list.
+	///Removes the item at given index. Returns true if successful; returns false if index is beyond the end of the list.
 	bool remove(size_t index);
 
-	///Return the position of the first occurrence of item if it is found. Return the size of the list if it is not found.
+	///Returns the position of the first occurrence of item if it is found. Returns the size of the list if it is not found.
 	size_t find(const T& item);
 
+	///Prints the items to the cout.
 	void display();
 };
 #include "Single_Linked_List.cpp"

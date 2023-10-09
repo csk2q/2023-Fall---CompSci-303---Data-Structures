@@ -6,8 +6,10 @@
 
 using namespace std;
 
-//Helper methods
-//TODO maybe add validation checking and move to myUtilities class
+
+//--Helper methods--//
+
+///Get int input after posting message to cout.
 int getInputInt(string msg)
 {
 	while (true)
@@ -25,6 +27,8 @@ int getInputInt(string msg)
 		}
 	}
 }
+
+///Get string input after posting message to cout.
 string getInput(string msg)
 {
 	cout << msg;
@@ -32,6 +36,9 @@ string getInput(string msg)
 	cin >> input;
 	return input;
 }
+
+
+//--main--//
 
 int main()
 {
@@ -44,7 +51,7 @@ int main()
 
 
 	//Prefill the list with data
-	if (getInput("Would you like to prefill the list with debug data? (y/n):") == "y")
+	if (getInput("Would you like to prefill the list with debug data? (y/n): ") == "y")
 	{
 		list.push_back("first");
 		list.push_back("second");
@@ -141,6 +148,8 @@ int main()
 		{
 			string item = getInput("Value to insert: ");
 			int index = getInputInt("Index to insert at: ");
+			while (index < 0)
+				index = getInputInt("Please enter an non-negative number.\nIndex to insert at: ");
 			list.insert(index, item);
 			cout << "Method \"insert\" executed.\n";
 			list.display();
@@ -149,12 +158,14 @@ int main()
 
 		case (9): //remove
 		{
-			int index = getInputInt("Index at which to remove: ");
+			int index = getInputInt("Index of item to remove remove: ");
+			while (index < 0)
+				index = getInputInt("Please enter an non-negative number.\nIndex of item to remove remove: ");
 			cout << "Method \"remove\" was executed ";
 			if (list.remove(index))
 				cout << "successfully.\n";
 			else
-				cout << " unsuccessfully.\nProvided index is out of range.\n";
+				cout << "unsuccessfully.\nProvided index is out of range.\n";
 			list.display();
 		}
 			break;
