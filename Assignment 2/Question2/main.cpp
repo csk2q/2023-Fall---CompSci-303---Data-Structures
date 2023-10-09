@@ -31,8 +31,7 @@ int main()
 
 	//Display employee summaries
 	displaySummary(professional, (double)39.8);
-	double nonPHrs = (double)46.33;
-	displaySummary(nonProfessional, nonPHrs);
+	displaySummary(nonProfessional, (double)46.33);
 
 	return 0;
 }
