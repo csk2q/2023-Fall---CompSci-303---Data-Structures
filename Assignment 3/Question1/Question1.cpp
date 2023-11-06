@@ -44,7 +44,7 @@ string Question1::convertInfixToPostfix(string text)
 	//Use a stack, reference slides/textbook
 	//TODO see Ch5 slide 80
 
-	//Set begining states
+	//Set beginning states
 	postfix = "";
 	while (!opStack.empty())
 		opStack.pop();
@@ -56,7 +56,7 @@ string Question1::convertInfixToPostfix(string text)
 		if (isalnum(token))
 		{
 			postfix += token;
-			postfix += " "; //May need removed?
+			postfix += " ";
 		}
 		//If operator
 		else if (precedence(token) > -1)

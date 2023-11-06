@@ -21,9 +21,9 @@ int main()
 {
     cout << "THIS IS QUESTION 1!\nTo run question 2 open the solution file in the folder \"Question2\"\n\n";
     
-    std::cout << "Greetings user! (Close the window to exit.)" << std::endl;
+    std::cout << "Greetings user! (Close the window to exit the program.)" << std::endl;
     
-    //Continusuly parse untill program exits
+    //Continuously parse until program exits
     while(true)
     {
         try
@@ -34,7 +34,7 @@ int main()
 
             //Check if braces are balanced and report if they are not balanced
             if (!Question1().isBalanced(infix))
-                cout << "Braces are not balanced. Cannot convert to postfix.";
+                cout << "Braces are not balanced. Cannot convert to postfix.\n";
             else
                 //Convert infix expression to postfix and return to user.
                 cout << "Postfix: " << Question1().convertInfixToPostfix(infix) << "\n";;

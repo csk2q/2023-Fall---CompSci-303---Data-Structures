@@ -29,7 +29,11 @@ private:
 public:
     //Returns a bool indicating if the braces of the given text is balanced
     bool isBalanced(string text);
-    //Returns the given infix expression as post or throws invalid_argument on failure. 
+
+    /*
+    * Returns the given infix expression as post or throws invalid_argument on failure. 
+    * PRECONDITION: Operands must be a single character and be alphanumeric. Eg: Valid:{ 1, b, 9, X} Invalid:{ 21, 2.35, 6X}
+    */
     string convertInfixToPostfix(string text);
 };
 
