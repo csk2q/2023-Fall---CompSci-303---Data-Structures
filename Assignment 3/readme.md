@@ -1,4 +1,4 @@
-# Assignment 2
+# Assignment 3
 
 For examples of running commands refer to the readme files in each question's folder.
 
